@@ -1,0 +1,29 @@
+.inputArea {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.inputField {
+    padding: 8px 16px;
+    border: 1px solid #808080;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    width: 360px;
+    transition: border 0.25s;
+}
+
+.inputField:hover {
+    outline: none;
+    border: 1px solid #646cff;
+}
+
+.inputField:focus {
+    outline: none;
+    border: 1px solid #646cff;
+}

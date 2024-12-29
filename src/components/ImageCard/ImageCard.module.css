@@ -1,0 +1,33 @@
+.gallery-item {
+    position: relative;
+    border: #808080 1px solid;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.gallery-image {
+    width: 360px;
+    height: 200px;
+    object-fit: cover;
+    cursor: zoom-in;
+}
+
+.gallery-legend {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    background-color: #1a1a1a;
+    width: 360px;
+    height: 48px;
+    top: calc(100% - 48px);
+}
+
+.gallery-legend-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-legend-item-label {
+    font-weight: bold;
+}
