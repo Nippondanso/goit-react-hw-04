@@ -23,7 +23,7 @@ export const fetchDataWithTopic = async (query, perPage = 15, page = 1, loadingS
 	} catch (error) {
 		console.error('error:', error);
 		createError();
-		throw error;
+		// throw error;
 	} finally {
 		loadingStop();
 	}

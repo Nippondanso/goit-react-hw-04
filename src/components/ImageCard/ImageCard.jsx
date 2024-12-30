@@ -2,7 +2,7 @@ import styles from './ImageCard.module.css'
 import {useContext} from "react";
 import {dataContext} from "../../context/DataProvired/dataContext.js";
 
-const ImageCard = ({id, urls, likes, user}) => {
+const ImageCard = ({id, urls, likes, user, alt_description}) => {
 	
 	const { updateImageUrl, openModal} = useContext(dataContext);
 	
@@ -11,9 +11,9 @@ const ImageCard = ({id, urls, likes, user}) => {
 		openModal();
 	}
 	
-	return (<li className={styles['gallery-item']} key={id} onClick={handleClick}>
+	return (<li className={styles['gallery-item']} key={id} >
 			<div className={styles["image-card"]}>
-				<img className={styles["gallery-image"]}  src={urls.small} alt=""/>
+				<img className={styles["gallery-image"]}  src={urls.small} onClick={handleClick} alt={alt_description}/>
 				<span className={styles["gallery-legend"]}>
 					<div className={styles['gallery-legend-item']}>
 						<p className={styles['gallery-legend-item-label']}>Likes</p>
