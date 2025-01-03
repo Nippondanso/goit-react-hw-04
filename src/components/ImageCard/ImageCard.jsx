@@ -1,10 +1,10 @@
 import styles from './ImageCard.module.css'
-import {useContext} from "react";
-import {dataContext} from "../../context/DataProvired/dataContext.js";
+// import {useContext} from "react";
+// import {dataContext} from "../../context/DataProvider/dataContext.js";
 
-const ImageCard = ({id, urls, likes, user, alt_description}) => {
+const ImageCard = ({id, urls, likes, user, alt_description, updateImageUrl, openModal}) => {
 	
-	const { updateImageUrl, openModal} = useContext(dataContext);
+	// const { updateImageUrl, openModal} = useContext(dataContext);
 	
 	const handleClick = () => {
 		updateImageUrl(urls['regular']);

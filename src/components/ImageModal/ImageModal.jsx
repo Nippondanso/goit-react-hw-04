@@ -1,13 +1,13 @@
 import Modal from "react-modal";
-import {useContext} from "react";
-import {dataContext} from "../../context/DataProvired/dataContext.js";
+// import {useContext} from "react";
+// import {dataContext} from "../../context/DataProvider/dataContext.js";
 import styles from "./ImageModal.module.css";
 
 Modal.setAppElement("#root");
 
-const ImageModal = () => {
+const ImageModal = ({isModalOpen,  closeModal, imageUrl}) => {
 	
-	const {isModalOpen,  closeModal, imageUrl} = useContext(dataContext);
+	// const {isModalOpen,  closeModal, imageUrl} = useContext(dataContext);
 	
 	return (
 		<Modal

@@ -1,37 +1,38 @@
-import {useContext} from "react";
-import {dataContext} from "../../context/DataProvired/dataContext.js";
+// import {useContext} from "react";
+// import {dataContext} from "../../context/DataProvider/dataContext.js";
 import styles from "./SearchBar.module.css";
 import toast from "react-hot-toast";
 
 const SearchBar = ({onSearch}) => {
-	const {
-		page,
-		setNextPage,
-		setSearchTopic,
-		updateData,
-		turnOnLoading,
-		turnOffLoading,
-		createError,
-		clearError,
-		refreshData
-	} = useContext(dataContext);
+	// const {
+	// 	page,
+	// 	setNextPage,
+	// 	setSearchTopic,
+	// 	updateData,
+	// 	turnOnLoading,
+	// 	turnOffLoading,
+	// 	createError,
+	// 	clearError,
+	// 	refreshData
+	// } = useContext(dataContext);
 	
 	const handleSubmit = async (evt) => {
 		evt.preventDefault();
-		refreshData();
-		clearError();
+		// refreshData();
+		// clearError();
 		
 		const form = evt.target;
-		const topic = form.elements.topic.value;
+		const topic = form.elements['topic'].value;
 		
 		if (topic.length === 0) {
 			toast.error('Please enter a topic.');
 			return;
 		}
 		
-		updateData(await onSearch(topic, 10, page, turnOnLoading, turnOffLoading, createError));
-		setSearchTopic(topic);
-		setNextPage();
+		onSearch(topic);
+		// updateData(await onSearch(topic, 10, page, turnOnLoading, turnOffLoading, createError));
+		// setSearchTopic(topic);
+		// setNextPage();
 		
 		form.reset();
 	};
